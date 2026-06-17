@@ -1,0 +1,8 @@
+bin/
+output/
+figure/
+src/fortran/tmp/
+*.mod
+*.o
+__pycache__/
+.pytest_cache/
