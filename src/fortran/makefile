@@ -5,7 +5,7 @@ FFLAGS      = -O3 -Wall -std=f2008 -J $(MOD_DIR)
 BIN_DIR     = ../../bin
 MOD_DIR     = tmp
 
-COMMON_SRC  = parameters.f90 initial_condition.f90 boundary_condition.f90 io_field.f90
+COMMON_SRC  = heat_parameters.f90 initial_condition.f90 boundary_condition.f90 io_field.f90
 SRC1        = $(COMMON_SRC) solver_1d.f90 main_1d.f90
 SRC2        = $(COMMON_SRC) solver_2d.f90 main_2d.f90
 

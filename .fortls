@@ -1,0 +1,5 @@
+{
+  "source_dirs": ["src/fortran"],
+  "mod_dirs": ["src/fortran/tmp"],
+  "incl_suffixes": [".f90"]
+}

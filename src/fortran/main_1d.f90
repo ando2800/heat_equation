@@ -25,7 +25,7 @@ program main_1d
    call read_arg(4, vtk_arg)
    if (len_trim(vtk_arg) > 0) vtk = trim(vtk_arg) /= 'no-vtk'
 
-   call solve_heat_1d(nx, nt, output_every, dt, alpha, lx, output_dir, initial, boundary, vtk)
+   call solve_heat_1d(nx, nt, output_every, dt, alpha, lx, output_dir, initial, boundary, vtk, 'euler')
    write(*,*) 'Calculation finished. Output directory:', trim(output_dir)
 
 contains

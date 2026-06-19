@@ -20,7 +20,7 @@ contains
 
       call ensure_directory(output_dir)
       write(serial, '(i4.4)') frame
-      filename = trim(output_dir) // '/temp.' // serial
+      filename = trim(output_dir) // '/t.' // serial
 
       open(10, file=trim(filename), status='replace')
       do i = 0, nx
@@ -40,7 +40,7 @@ contains
 
       call ensure_directory(output_dir)
       write(serial, '(i4.4)') frame
-      filename = trim(output_dir) // '/field.' // serial
+      filename = trim(output_dir) // '/t.' // serial
 
       open(10, file=trim(filename), status='replace')
       do j = 0, ny
@@ -63,7 +63,7 @@ contains
 
       call ensure_directory(output_dir)
       write(serial, '(i4.4)') frame
-      filename = trim(output_dir) // '/temp.' // serial // '.vtk'
+      filename = trim(output_dir) // '/t.' // serial // '.vtk'
 
       open(10, file=trim(filename), status='replace')
       write(10, '(A)') '# vtk DataFile Version 3.0'
@@ -95,7 +95,7 @@ contains
 
       call ensure_directory(output_dir)
       write(serial, '(i4.4)') frame
-      filename = trim(output_dir) // '/field.' // serial // '.vtk'
+      filename = trim(output_dir) // '/t.' // serial // '.vtk'
 
       open(10, file=trim(filename), status='replace')
       write(10, '(A)') '# vtk DataFile Version 3.0'
