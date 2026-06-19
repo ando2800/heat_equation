@@ -1,6 +1,7 @@
 PYTHON := python3
+JULIA  := julia
 
-.PHONY: all build run-python run-fortran animation clean clean-output clean-figure
+.PHONY: all build run-python run-fortran run-julia animation clean clean-output clean-figure
 
 all: build
 
@@ -14,6 +15,9 @@ run-python:
 run-fortran: build
 	./bin/heat_1d output/fortran/1d
 	./bin/heat_2d output/fortran/2d
+
+run-julia:
+	$(JULIA) src/julia/run_1d.jl output/julia/1d
 
 animation:
 	$(PYTHON) scripts/animate_heat_1d.py --input-dir output/python/1d --frames-dir figure/frames_python_1d --output figure/python_heat_1d
